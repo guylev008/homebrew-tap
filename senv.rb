@@ -5,21 +5,21 @@
 class Senv < Formula
   desc "Friends don't let friends leak secrets in terminal windows"
   homepage "https://github.com/spectralops/senv"
-  version "0.3.0"
+  version "0.5.0"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/SpectralOps/senv/releases/download/v0.3.0/senv_0.3.0_Darwin_x86_64.tar.gz"
-    sha256 "c6ec6e12b40b717136fb4bc6e38e7169abcac8596615ed3d6e7210cc7c660303"
+    url "https://github.com/SpectralOps/senv/releases/download/v0.5.0/senv_0.5.0_Darwin_x86_64.tar.gz"
+    sha256 "93903a246f553d55f8ee04da23a5e1bf10845b3c2140e8d037825f81018c391d"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/SpectralOps/senv/releases/download/v0.3.0/senv_0.3.0_Linux_x86_64.tar.gz"
-    sha256 "cfc87d816669955035808610a97dd88fba533268c583b957d756e32ae4757c72"
+    url "https://github.com/SpectralOps/senv/releases/download/v0.5.0/senv_0.5.0_Linux_x86_64.tar.gz"
+    sha256 "72b1d88cbfb7d7b49ecb553be592d1acf2c0b939b944ec6bc9eb12929df66ae1"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/SpectralOps/senv/releases/download/v0.3.0/senv_0.3.0_Linux_arm64.tar.gz"
-    sha256 "e2cc17d90557db9b353dc52bc087d9415fc266ca0fb07a6b91d7acf14d12240e"
+    url "https://github.com/SpectralOps/senv/releases/download/v0.5.0/senv_0.5.0_Linux_arm64.tar.gz"
+    sha256 "0fbd2e5327a382b16cee199c80f12e55a0a16532f7223de5b18b20c776d1c51a"
   end
 
   def install
