@@ -5,30 +5,29 @@
 class Teller < Formula
   desc "A secret manager for developers - never leave your terminal for secrets"
   homepage "https://github.com/spectralops/teller"
-  version "0.3.0"
+  version "0.4.0"
   license "Apache 2.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/SpectralOps/teller/releases/download/v0.3.0/teller_0.3.0_Darwin_x86_64.tar.gz"
-    sha256 "04b1d6f6ebaa971c1f15b7cd375f316eebdc6dc6b830d99fac6858d515a03005"
+    url "https://github.com/SpectralOps/teller/releases/download/v0.4.0/teller_0.4.0_Darwin_x86_64.tar.gz"
+    sha256 "8e951b3025000429b91611ff367ec03437fd0778ba962270bfe14feaf00c1c46"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/SpectralOps/teller/releases/download/v0.3.0/teller_0.3.0_Darwin_arm64.tar.gz"
-    sha256 "2574d83f5f64c88a23390717f337c326d8303ad6a8d6fb16f79c38094ef25046"
+    url "https://github.com/SpectralOps/teller/releases/download/v0.4.0/teller_0.4.0_Darwin_arm64.tar.gz"
+    sha256 "3759422b4de05e857262fa68a66af2588dd21f273b9fdaeeeccc3fb3f657ee0d"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/SpectralOps/teller/releases/download/v0.3.0/teller_0.3.0_Linux_x86_64.tar.gz"
-    sha256 "38993607e59034cf0d2d7a1aa353253b793a14b3e178ef19eca31d5b422efb9f"
+    url "https://github.com/SpectralOps/teller/releases/download/v0.4.0/teller_0.4.0_Linux_x86_64.tar.gz"
+    sha256 "ba9671da1d63107e80f6fe2052667177e23c65d2d01a213e54feddbf9fe91608"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/SpectralOps/teller/releases/download/v0.3.0/teller_0.3.0_Linux_arm64.tar.gz"
-    sha256 "c9fd0a9613bad25957e692f8900497ae970eef98fabba0f64685ce926d215734"
+    url "https://github.com/SpectralOps/teller/releases/download/v0.4.0/teller_0.4.0_Linux_arm64.tar.gz"
+    sha256 "8a4f2cd7d9ec40cd31b21ca99f870832ee9df3c58e1530a6e13b08ff32a20a05"
   end
 
   def install
-    ln_s libexec/"teller", libexec/"tlr"
     bin.install "teller"
-    bin.install_symlink "tlr"
+    ln_s bin/"teller", bin/"tlr"
   end
 end
