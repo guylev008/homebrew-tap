@@ -5,25 +5,25 @@
 class Teller < Formula
   desc "A secret manager for developers - never leave your terminal for secrets"
   homepage "https://github.com/spectralops/teller"
-  version "0.5.0"
+  version "0.6.0"
   license "Apache 2.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/SpectralOps/teller/releases/download/v0.5.0/teller_0.5.0_Darwin_x86_64.tar.gz"
-    sha256 "f0461361460d6bc1c0edf3d53d8aaf5b019113f44a5b0d87981e8f341cdcd53a"
+    url "https://github.com/SpectralOps/teller/releases/download/v0.6.0/teller_0.6.0_Darwin_x86_64.tar.gz"
+    sha256 "992cb8fb2973f12be16932a495fb3a0f6b717750bfca5d8bbdbbdc1c9ae5c5c9"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/SpectralOps/teller/releases/download/v0.5.0/teller_0.5.0_Darwin_arm64.tar.gz"
-    sha256 "9f334b33127dcdca3caa6259666e90631ad5d21ad1746d749ed86825b5360959"
+    url "https://github.com/SpectralOps/teller/releases/download/v0.6.0/teller_0.6.0_Darwin_arm64.tar.gz"
+    sha256 "6494f9544ad1558949ec468b85e2618155f540f9c6074f68cae750bd19a0b4d3"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/SpectralOps/teller/releases/download/v0.5.0/teller_0.5.0_Linux_x86_64.tar.gz"
-    sha256 "630f9078bc2adc5a78ab2ceca148706ca18daf0a535b61c4ecb9822f556f7173"
+    url "https://github.com/SpectralOps/teller/releases/download/v0.6.0/teller_0.6.0_Linux_x86_64.tar.gz"
+    sha256 "73a3799f628fddc39571ddf750727c88ae528c51303a0b50d06fe961fbdfe8cf"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/SpectralOps/teller/releases/download/v0.5.0/teller_0.5.0_Linux_arm64.tar.gz"
-    sha256 "5bd82a5247296bb887f4d6aceba3077402a5c5422ead24e7443e8f80c2a6d1de"
+    url "https://github.com/SpectralOps/teller/releases/download/v0.6.0/teller_0.6.0_Linux_arm64.tar.gz"
+    sha256 "f7ccf119786b198b8b2846c417dcd05ee70138dd67a14bc3a665b55904d14b36"
   end
 
   def install
