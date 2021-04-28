@@ -1,9 +1,9 @@
 class Spectral < Formula
   desc "Automated code security for modern teams"
   homepage "https://spectralops.io"
-  url "https://get.spectralops.io/latest/dl/mac?v=1.3.19"
-  version "1.3.19"
-  sha256 "0009c4e3bbf6f6cc08cf346506d0b05cb7efa11d7eca3125e7a9577fca356489"
+  url "https://get.spectralops.io/latest/dl/mac?v=1.4.1"
+  version "1.4.1"
+  sha256 "a51f85eb8cf1bda36f070243b5024355d23221a459e645bde8ef42f3532b5220"
 
   def install
     bin.install "spectral"
