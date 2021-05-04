@@ -5,21 +5,25 @@
 class Senv < Formula
   desc "Friends don't let friends leak secrets in terminal windows"
   homepage "https://github.com/spectralops/senv"
-  version "0.5.0"
+  version "0.7.0"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/SpectralOps/senv/releases/download/v0.5.0/senv_0.5.0_Darwin_x86_64.tar.gz"
-    sha256 "93903a246f553d55f8ee04da23a5e1bf10845b3c2140e8d037825f81018c391d"
+    url "https://github.com/SpectralOps/senv/releases/download/v0.7.0/senv_0.7.0_Darwin_x86_64.tar.gz"
+    sha256 "0ae2cf3f381c81e45c6d66b3268c9030a48cc008fb0b02c607d84a5c1ce3d3f4"
+  end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/SpectralOps/senv/releases/download/v0.7.0/senv_0.7.0_Darwin_arm64.tar.gz"
+    sha256 "6528a84f89d90dedeeca2a103a899487c96ba5715275894432b3a13eb6c34bad"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/SpectralOps/senv/releases/download/v0.5.0/senv_0.5.0_Linux_x86_64.tar.gz"
-    sha256 "72b1d88cbfb7d7b49ecb553be592d1acf2c0b939b944ec6bc9eb12929df66ae1"
+    url "https://github.com/SpectralOps/senv/releases/download/v0.7.0/senv_0.7.0_Linux_x86_64.tar.gz"
+    sha256 "e032c44d714c24a0dd089ce858e7ac171c34330800fb6bc8c5b6a106f125eda0"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/SpectralOps/senv/releases/download/v0.5.0/senv_0.5.0_Linux_arm64.tar.gz"
-    sha256 "0fbd2e5327a382b16cee199c80f12e55a0a16532f7223de5b18b20c776d1c51a"
+    url "https://github.com/SpectralOps/senv/releases/download/v0.7.0/senv_0.7.0_Linux_arm64.tar.gz"
+    sha256 "fee81f257c34fd10ab6ff84298de619659e3b9c1c3d5ca05a976489c2b91cb02"
   end
 
   def install
