@@ -5,21 +5,25 @@
 class Netz < Formula
   desc "Discover internet-wide misconfigurations while drinking coffee"
   homepage "https://github.com/spectralops/netz"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/SpectralOps/netz/releases/download/v0.1.0/netz_0.1.0_Darwin_x86_64.tar.gz"
-    sha256 "5ba4c433c92f0ee817812ffb774137800b9670c12c9d2bcdab028e792b74911c"
+    url "https://github.com/SpectralOps/netz/releases/download/v0.2.0/netz_0.2.0_Darwin_x86_64.tar.gz"
+    sha256 "b6f12dc5b827e205b6a641d8317a3042ca2c7b175bb51354b57ef164145fb0a8"
+  end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/SpectralOps/netz/releases/download/v0.2.0/netz_0.2.0_Darwin_arm64.tar.gz"
+    sha256 "490f299d897697162f68595ab65bf4a9b2832274878f7c676815ec398751fd5b"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/SpectralOps/netz/releases/download/v0.1.0/netz_0.1.0_Linux_x86_64.tar.gz"
-    sha256 "3e64e375d334944d80d4256d3c9b24ac7599d00e453ac46c3d28e29e3989e7f5"
+    url "https://github.com/SpectralOps/netz/releases/download/v0.2.0/netz_0.2.0_Linux_x86_64.tar.gz"
+    sha256 "483c2b3533d67a8d57f85cc1d697f20d55e599122efceabc4bf95f995b240ae0"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/SpectralOps/netz/releases/download/v0.1.0/netz_0.1.0_Linux_arm64.tar.gz"
-    sha256 "d76e727174a72cb78661e0e8e26bfaa2a300d1374a3e4b26e12d054fabb6b09a"
+    url "https://github.com/SpectralOps/netz/releases/download/v0.2.0/netz_0.2.0_Linux_arm64.tar.gz"
+    sha256 "88a66f55e94161e6cf8885c47d6ae4aa00ee18ce51f2363f5b6466280211665a"
   end
 
   def install
