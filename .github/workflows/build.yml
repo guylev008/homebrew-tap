@@ -11,7 +11,7 @@ jobs:
       - name: Setup Preflight
         uses: SpectralOps/setup-preflight-action@v1
         with:
-          preflight-version: "1.1.3"
+          preflight-version: "1.1.4"
       - name: Spectral Install
         run: curl -L "https://get.spectralops.io/latest/x/sh?dsn=$SPECTRAL_DSN" | preflight run https://sigs.spectralops.io/spectral
       - name: Spectral Scan
