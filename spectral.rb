@@ -3,7 +3,7 @@ class Spectral < Formula
   homepage "https://spectralops.io"
   url "https://get.spectralops.io/latest/dl/mac?v=1.7.0"
   version "1.7.0"
-  sha256 "0fe0a98c4dbbcd2965c3b66eeabefc110616a2462d5469101757696113820cdb"
+  sha256 "f4006add4bacd7d0e82311d2bca3f5d3723894fb905c03e2c529b3748c885515"
 
   def install
     bin.install "spectral"
