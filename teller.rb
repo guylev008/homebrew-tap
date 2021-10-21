@@ -7,7 +7,6 @@ class Teller < Formula
   homepage "https://github.com/spectralops/teller"
   version "1.3.0"
   license "Apache 2.0"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/SpectralOps/teller/releases/download/v1.3.0/teller_1.3.0_Darwin_x86_64.tar.gz"
