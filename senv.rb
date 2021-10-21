@@ -7,7 +7,6 @@ class Senv < Formula
   homepage "https://github.com/spectralops/senv"
   version "0.7.0"
   license "MIT"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/SpectralOps/senv/releases/download/v0.7.0/senv_0.7.0_Darwin_x86_64.tar.gz"
