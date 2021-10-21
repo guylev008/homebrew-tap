@@ -7,7 +7,6 @@ class Preflight < Formula
   homepage "https://github.com/spectralops/preflight"
   version "1.1.4"
   license "Apache 2.0"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/SpectralOps/preflight/releases/download/v1.1.4/preflight_1.1.4_Darwin_x86_64.tar.gz"
