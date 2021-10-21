@@ -7,7 +7,6 @@ class Netz < Formula
   homepage "https://github.com/spectralops/netz"
   version "0.2.0"
   license "MIT"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/SpectralOps/netz/releases/download/v0.2.0/netz_0.2.0_Darwin_x86_64.tar.gz"
