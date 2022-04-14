@@ -5,28 +5,48 @@
 class Teller < Formula
   desc "A secret manager for developers - never leave your terminal for secrets"
   homepage "https://github.com/spectralops/teller"
-  version "1.4.0"
+  version "1.5.0"
   license "Apache 2.0"
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/SpectralOps/teller/releases/download/v1.4.0/teller_1.4.0_Darwin_x86_64.tar.gz"
-    sha256 "80a71bd3b60d207ce30c4ec633725b113ad134601b8edbddc643349723099238"
-  end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/SpectralOps/teller/releases/download/v1.4.0/teller_1.4.0_Darwin_arm64.tar.gz"
-    sha256 "7ab41f8b9f9a55b493ec50cc962793b54fe5b1ebcb2bf49737826de7d16c4f7d"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/SpectralOps/teller/releases/download/v1.4.0/teller_1.4.0_Linux_x86_64.tar.gz"
-    sha256 "3429ee9363fc822018c81cc56172470947177d6c22d74945cbd2931e1005ae42"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/SpectralOps/teller/releases/download/v1.4.0/teller_1.4.0_Linux_arm64.tar.gz"
-    sha256 "00e3097fd4791556c3ae7c57e6dd4cea79e837621f5ebdb47048a5723b881efb"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/SpectralOps/teller/releases/download/v1.5.0/teller_1.5.0_Darwin_x86_64.tar.gz"
+      sha256 "bf8380e72cd184367f198611ac379197166b04d0c55f996fcd856d5b7c98e112"
+
+      def install
+        bin.install "teller"
+        ln_s bin/"teller", bin/"tlr"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/SpectralOps/teller/releases/download/v1.5.0/teller_1.5.0_Darwin_arm64.tar.gz"
+      sha256 "b032548ae0b74700cbdd6e3d5aef7ff7aaf6d64b6ea59ff6e96f349a8e5eafd7"
+
+      def install
+        bin.install "teller"
+        ln_s bin/"teller", bin/"tlr"
+      end
+    end
   end
 
-  def install
-    bin.install "teller"
-    ln_s bin/"teller", bin/"tlr"
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/SpectralOps/teller/releases/download/v1.5.0/teller_1.5.0_Linux_arm64.tar.gz"
+      sha256 "cd5656550ac2c87d292d20b99c9b2540128f83eb6fdcc7f87daa4f35621369c6"
+
+      def install
+        bin.install "teller"
+        ln_s bin/"teller", bin/"tlr"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/SpectralOps/teller/releases/download/v1.5.0/teller_1.5.0_Linux_x86_64.tar.gz"
+      sha256 "58285022f5d333e5a7af91adbeb49e7f11312a1a9f4f92e95b271a71a7d32351"
+
+      def install
+        bin.install "teller"
+        ln_s bin/"teller", bin/"tlr"
+      end
+    end
   end
 end
