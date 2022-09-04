@@ -5,13 +5,13 @@
 class Teller < Formula
   desc "A secret manager for developers - never leave your terminal for secrets"
   homepage "https://github.com/spectralops/teller"
-  version "1.5.4"
+  version "1.5.5"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tellerops/teller/releases/download/v1.5.4/teller_1.5.4_Darwin_x86_64.tar.gz"
-      sha256 "e94a3178e792766f890b1b5761957da4aef1ecca37543919b5793b6a1553cf7c"
+      url "https://github.com/tellerops/teller/releases/download/v1.5.5/teller_1.5.5_Darwin_x86_64.tar.gz"
+      sha256 "398e8184aa28908d7a53a6ca7432f31a8125f557a80eb2b9985ff35ede2ba7c7"
 
       def install
         bin.install "teller"
@@ -19,8 +19,8 @@ class Teller < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tellerops/teller/releases/download/v1.5.4/teller_1.5.4_Darwin_arm64.tar.gz"
-      sha256 "ede5646132a15238be27b168c3b7f8f1cc0446771de1d4b1c66b748bb485a85d"
+      url "https://github.com/tellerops/teller/releases/download/v1.5.5/teller_1.5.5_Darwin_arm64.tar.gz"
+      sha256 "40440d0400c27cbed93b2fdc1cdaa9f2e106e03b1da75e7cda16c43d9739a018"
 
       def install
         bin.install "teller"
@@ -31,8 +31,8 @@ class Teller < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tellerops/teller/releases/download/v1.5.4/teller_1.5.4_Linux_arm64.tar.gz"
-      sha256 "9ae05f6083d146a373601a3f131854af5613caaf1a5dce1cc7d98ddeecb9a393"
+      url "https://github.com/tellerops/teller/releases/download/v1.5.5/teller_1.5.5_Linux_arm64.tar.gz"
+      sha256 "255454d78c8b5ae90cf8ba143ba5191f23066c932f25039f943197cfd3e1c0de"
 
       def install
         bin.install "teller"
@@ -40,8 +40,8 @@ class Teller < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tellerops/teller/releases/download/v1.5.4/teller_1.5.4_Linux_x86_64.tar.gz"
-      sha256 "bd9a00590d06319bf252cff074a5f0a0a073039005d4dc98457703ba3597ad3d"
+      url "https://github.com/tellerops/teller/releases/download/v1.5.5/teller_1.5.5_Linux_x86_64.tar.gz"
+      sha256 "fe2ea1d91d519e1842460f5a40788ef78294a44192a8cc9292fb3955ebcbfc5c"
 
       def install
         bin.install "teller"
