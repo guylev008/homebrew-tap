@@ -5,13 +5,13 @@
 class Teller < Formula
   desc "A secret manager for developers - never leave your terminal for secrets"
   homepage "https://github.com/spectralops/teller"
-  version "1.5.5"
+  version "1.5.6"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tellerops/teller/releases/download/v1.5.5/teller_1.5.5_Darwin_x86_64.tar.gz"
-      sha256 "398e8184aa28908d7a53a6ca7432f31a8125f557a80eb2b9985ff35ede2ba7c7"
+      url "https://github.com/tellerops/teller/releases/download/v1.5.6/teller_1.5.6_Darwin_x86_64.tar.gz"
+      sha256 "00489af0ca4edd8a62e1d465e3c02fb4dafc6495f3abf2d96c6a2f4c561b5dd4"
 
       def install
         bin.install "teller"
@@ -19,8 +19,8 @@ class Teller < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tellerops/teller/releases/download/v1.5.5/teller_1.5.5_Darwin_arm64.tar.gz"
-      sha256 "40440d0400c27cbed93b2fdc1cdaa9f2e106e03b1da75e7cda16c43d9739a018"
+      url "https://github.com/tellerops/teller/releases/download/v1.5.6/teller_1.5.6_Darwin_arm64.tar.gz"
+      sha256 "fddeec76ebe4517bcbdba27aaebef2ad3c69cd7d1c8868f9222bf7dfadd627e7"
 
       def install
         bin.install "teller"
@@ -30,18 +30,18 @@ class Teller < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tellerops/teller/releases/download/v1.5.5/teller_1.5.5_Linux_arm64.tar.gz"
-      sha256 "255454d78c8b5ae90cf8ba143ba5191f23066c932f25039f943197cfd3e1c0de"
+    if Hardware::CPU.intel?
+      url "https://github.com/tellerops/teller/releases/download/v1.5.6/teller_1.5.6_Linux_x86_64.tar.gz"
+      sha256 "5724f50ec15f091c7e8557b212f5216c493bee30e47af54ae5430ae32ddeee14"
 
       def install
         bin.install "teller"
         ln_s bin/"teller", bin/"tlr"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/tellerops/teller/releases/download/v1.5.5/teller_1.5.5_Linux_x86_64.tar.gz"
-      sha256 "fe2ea1d91d519e1842460f5a40788ef78294a44192a8cc9292fb3955ebcbfc5c"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/tellerops/teller/releases/download/v1.5.6/teller_1.5.6_Linux_arm64.tar.gz"
+      sha256 "5f4d00a4126df6e875dedb81669ec71e1002b9f7b088fd1758261f03a67da679"
 
       def install
         bin.install "teller"
