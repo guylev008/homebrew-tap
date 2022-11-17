@@ -5,27 +5,44 @@
 class Preflight < Formula
   desc "Verify your curl scripts and executables before running them"
   homepage "https://github.com/spectralops/preflight"
-  version "1.1.4"
+  version "1.1.5"
   license "Apache 2.0"
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/SpectralOps/preflight/releases/download/v1.1.4/preflight_1.1.4_Darwin_x86_64.tar.gz"
-    sha256 "1adfff2d25e6c48740453b5724242b09f06d61a108f11ababb1daa9a8b81aa37"
-  end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/SpectralOps/preflight/releases/download/v1.1.4/preflight_1.1.4_Darwin_arm64.tar.gz"
-    sha256 "ae95ae0739953ea0a37c9b0a7b2037c7d1556c219072f3689f5c8866f933d2a1"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/SpectralOps/preflight/releases/download/v1.1.4/preflight_1.1.4_Linux_x86_64.tar.gz"
-    sha256 "349c1e3dad933768669d3a46ff63a0cbd232ebf60860a158dbb050333be4fee3"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/SpectralOps/preflight/releases/download/v1.1.4/preflight_1.1.4_Linux_arm64.tar.gz"
-    sha256 "68b1ff26f8ebb00c550c7f289c55e862199896821cd99cb680a89a2f3a69caf5"
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/SpectralOps/preflight/releases/download/v1.1.5/preflight_1.1.5_Darwin_arm64.tar.gz"
+      sha256 "ee18ed8eda9f83b41be18a0e3cde647a5dbbd5e1af16cda5deca0b842335624f"
+
+      def install
+        bin.install "preflight"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/SpectralOps/preflight/releases/download/v1.1.5/preflight_1.1.5_Darwin_x86_64.tar.gz"
+      sha256 "a7d92336b5a9d44bb33df17488e719a3c76e3ee59f5b945a74d05c569ebef491"
+
+      def install
+        bin.install "preflight"
+      end
+    end
   end
 
-  def install
-    bin.install "preflight"
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/SpectralOps/preflight/releases/download/v1.1.5/preflight_1.1.5_Linux_arm64.tar.gz"
+      sha256 "6edce8b440701ec8bfd4041f4f018d41e71199b8e02b3ea291c01d75d418ccad"
+
+      def install
+        bin.install "preflight"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/SpectralOps/preflight/releases/download/v1.1.5/preflight_1.1.5_Linux_x86_64.tar.gz"
+      sha256 "d428ff2137e63f98ddaadd2a30f943a9f2eaeb1eecce788f917e501e19f44b02"
+
+      def install
+        bin.install "preflight"
+      end
+    end
   end
 end
